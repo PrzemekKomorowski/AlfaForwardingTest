@@ -1,14 +1,15 @@
 from flask import Flask, render_template, url_for, request, redirect
-from data import queries
-from urllib import parse
+from datetime import datetime
+
+actual_date = datetime.now()
 
 app = Flask('RON_EXCHANGE_RATE')
 
 
 @app.route('/')
 def index():
-    return render_template('index.html')
-
+    day_date = actual_date.strftime("%Y-%m-%d")
+    return render_template('index.html', day_date=day_date)
 
 def main():
     app.run(

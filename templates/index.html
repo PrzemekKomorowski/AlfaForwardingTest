@@ -22,9 +22,7 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='style/form.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='style/grid.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='style/utils.css') }}">
-
-    <!-- page specific styling -->
-    <link rel="stylesheet" href="{{ url_for('static', filename='style/detailed-view.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static',filename='style/pagination.css') }}">
 </head>
 
 <body>
@@ -45,6 +43,11 @@
             <button type="button" id="RonExchangeRateButton"> Refresh Ron Exchange Rate</button>
         </div>
         <div class="card text-center" id="RonTable">
+            <div class="pagination">
+                <a>&laquo;</a>
+                <p>{{ day_date }}</p>
+                <a>&raquo;</a>
+            </div>
             <table>
                 <thead>
                 <tr>
