@@ -27,8 +27,8 @@ table td {
 
 table th,
 table td {
-    margin: 0;
-    padding: 6px;
+    text-align: center;
+    padding: 10px;
 }
 
 table tr:nth-child(even) {
