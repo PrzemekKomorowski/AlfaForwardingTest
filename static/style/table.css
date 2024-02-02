@@ -4,13 +4,13 @@ table {
 
     border-spacing: 0;
 
-    border: 1px solid #278bc4;
+    border: 1px solid #0f7c0a;
     border-radius: 3px;
 }
 
 table th {
     color: #fff;
-    background: #278bc4;
+    background: #2ed216;
 }
 
 table th a {

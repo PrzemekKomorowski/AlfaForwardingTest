@@ -4,15 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f00cf639-db2d-4a30-a673-6186f941e32b" name="Changes" comment="Dodano Front Paginacji">
-      <change afterPath="$PROJECT_DIR$/database/ExchangeRate.db" afterDir="false" />
+    <list default="true" id="f00cf639-db2d-4a30-a673-6186f941e32b" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/ExchangeRate.py" beforeDir="false" afterPath="$PROJECT_DIR$/data/ExchangeRate.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/data_manager.py" beforeDir="false" afterPath="$PROJECT_DIR$/data/data_manager.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/queries.py" beforeDir="false" afterPath="$PROJECT_DIR$/data/queries.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/test.db" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/ExchangeRate.db" beforeDir="false" afterPath="$PROJECT_DIR$/database/ExchangeRate.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/style/background.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/style/background.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/style/button.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/style/button.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/style/footer.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/style/footer.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/static/style/pagination.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/style/pagination.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/style/table.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/style/table.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,7 +72,7 @@
       <recent name="C:\Users\Eteer\Desktop\AlfaForwading\AlfaForwardingTest\static\assets" />
     </key>
   </component>
-  <component name="RunManager" selected="Flask server.Flask (main.py)">
+  <component name="RunManager">
     <configuration name="AlfaForwardingTest" type="Python.FlaskServer">
       <module name="AlfaForwardingTest" />
       <option name="target" value="$PROJECT_DIR$/main.py" />
@@ -115,7 +116,7 @@
       <workItem from="1706717011942" duration="6442000" />
       <workItem from="1706784297703" duration="1836000" />
       <workItem from="1706799502574" duration="2790000" />
-      <workItem from="1706867473095" duration="2487000" />
+      <workItem from="1706867473095" duration="6152000" />
     </task>
     <task id="LOCAL-00001" summary="Creating RonTable in Front with Button">
       <created>1706786077778</created>
@@ -131,7 +132,14 @@
       <option name="project" value="LOCAL" />
       <updated>1706804352801</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Poprawa Paginacji oraz edycja biblioteki do Kursów">
+      <created>1706870341396</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1706870341396</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -152,13 +160,14 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="Creating RonTable in Front with Button" />
     <MESSAGE value="Dodano Front Paginacji" />
-    <option name="LAST_COMMIT_MESSAGE" value="Dodano Front Paginacji" />
+    <MESSAGE value="Poprawa Paginacji oraz edycja biblioteki do Kursów" />
+    <option name="LAST_COMMIT_MESSAGE" value="Poprawa Paginacji oraz edycja biblioteki do Kursów" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/AlfaForwardingTest$ExchangeRate.coverage" NAME="ExchangeRate Coverage Results" MODIFIED="1706803809585" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/data" />
     <SUITE FILE_PATH="coverage/AlfaForwardingTest$Flask__main_py_.coverage" NAME="Flask (main.py) Coverage Results" MODIFIED="1706870146853" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/AlfaForwardingTest$ExchangeRate.coverage" NAME="ExchangeRate Coverage Results" MODIFIED="1706874732380" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/data" />
     <SUITE FILE_PATH="coverage/AlfaForwardingTest$RonAPI.coverage" NAME="RonAPI Coverage Results" MODIFIED="1706801544199" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/data" />
-    <SUITE FILE_PATH="coverage/AlfaForwardingTest$data_manager.coverage" NAME="data_manager Coverage Results" MODIFIED="1706868432906" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/data" />
+    <SUITE FILE_PATH="coverage/AlfaForwardingTest$data_manager.coverage" NAME="data_manager Coverage Results" MODIFIED="1706875631049" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/data" />
     <SUITE FILE_PATH="coverage/AlfaForwardingTest$Flask__app_py_.coverage" NAME="Flask (main.py) Coverage Results" MODIFIED="1706723531625" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
