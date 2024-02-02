@@ -1,20 +1,20 @@
 import sqlite3
 
-conn = sqlite3.connect("C:\\Users\\Eteer\\Desktop\\AlfaForwading\\AlfaForwardingTest\\database\\test.db")
+conn = sqlite3.connect("C:\\Users\\Eteer\\Desktop\\AlfaForwading\\AlfaForwardingTest\\database\\ExchangeRate.db")
 
 cur = conn.cursor()
 
-conn.execute('''
-    CREATE TABLE IF NOT EXISTS test (fp TEXT, lm TEXT)
+cur.execute('''
+    CREATE TABLE IF NOT EXISTS RonExchangeRate (record_id INTEGER PRIMARY KEY AUTOINCREMENT,currency_code VARCHAR(3), rate_value DECIMAL(10,4))
 ''')
 
-cur.execute('''
-    INSERT INTO test (fp,lm) VALUES("Przemek","Piotrek")
-''')
+# cur.execute('''
+#     INSERT INTO RonExchangeRate (currency_code,rate_value) VALUES("PWM",2.25)
+# ''')
 conn.commit()
 
 cur.execute('''
-    SELECT * FROM test
+    SELECT * FROM RonExchangeRate
 ''')
 
 for data in cur:

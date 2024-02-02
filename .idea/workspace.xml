@@ -4,12 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f00cf639-db2d-4a30-a673-6186f941e32b" name="Changes" comment="Dodanie bazy danych z Biblioteki do Kursów">
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+    <list default="true" id="f00cf639-db2d-4a30-a673-6186f941e32b" name="Changes" comment="Dodano Front Paginacji">
+      <change afterPath="$PROJECT_DIR$/database/ExchangeRate.db" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/RonAPI.py" beforeDir="false" afterPath="$PROJECT_DIR$/data/ExchangeRate.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/test.db" beforeDir="false" afterPath="$PROJECT_DIR$/database/test.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/ExchangeRate.py" beforeDir="false" afterPath="$PROJECT_DIR$/data/ExchangeRate.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/data_manager.py" beforeDir="false" afterPath="$PROJECT_DIR$/data/data_manager.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/queries.py" beforeDir="false" afterPath="$PROJECT_DIR$/data/queries.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/test.db" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/style/pagination.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/style/pagination.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -44,26 +46,26 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "DefaultHtmlFileTemplate": "HTML File",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/Eteer/Desktop/AlfaForwading/AlfaForwardingTest",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Eteer/Desktop/AlfaForwading/AlfaForwardingTest&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "sqlite"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;sqlite&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Eteer\Desktop\AlfaForwading\AlfaForwardingTest\static\assets" />
@@ -113,6 +115,7 @@
       <workItem from="1706717011942" duration="6442000" />
       <workItem from="1706784297703" duration="1836000" />
       <workItem from="1706799502574" duration="2790000" />
+      <workItem from="1706867473095" duration="2487000" />
     </task>
     <task id="LOCAL-00001" summary="Creating RonTable in Front with Button">
       <created>1706786077778</created>
@@ -121,7 +124,14 @@
       <option name="project" value="LOCAL" />
       <updated>1706786077778</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Dodano Front Paginacji">
+      <created>1706804352801</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1706804352801</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -141,13 +151,14 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="Creating RonTable in Front with Button" />
-    <option name="LAST_COMMIT_MESSAGE" value="Creating RonTable in Front with Button" />
+    <MESSAGE value="Dodano Front Paginacji" />
+    <option name="LAST_COMMIT_MESSAGE" value="Dodano Front Paginacji" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/AlfaForwardingTest$Flask__main_py_.coverage" NAME="Flask (main.py) Coverage Results" MODIFIED="1706803780736" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/AlfaForwardingTest$ExchangeRate.coverage" NAME="ExchangeRate Coverage Results" MODIFIED="1706803809585" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/data" />
-    <SUITE FILE_PATH="coverage/AlfaForwardingTest$data_manager.coverage" NAME="data_manager Coverage Results" MODIFIED="1706801288504" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/data" />
+    <SUITE FILE_PATH="coverage/AlfaForwardingTest$Flask__main_py_.coverage" NAME="Flask (main.py) Coverage Results" MODIFIED="1706870146853" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/AlfaForwardingTest$RonAPI.coverage" NAME="RonAPI Coverage Results" MODIFIED="1706801544199" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/data" />
+    <SUITE FILE_PATH="coverage/AlfaForwardingTest$data_manager.coverage" NAME="data_manager Coverage Results" MODIFIED="1706868432906" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/data" />
     <SUITE FILE_PATH="coverage/AlfaForwardingTest$Flask__app_py_.coverage" NAME="Flask (main.py) Coverage Results" MODIFIED="1706723531625" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>

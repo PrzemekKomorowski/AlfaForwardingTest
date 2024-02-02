@@ -1,16 +1,23 @@
 /* Pagination links */
 .pagination{
-   width: 100%;
-   margin-top: 5px;
-   text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    margin-top: 5px;
+    text-align: center;
  }
  .pagination a {
+   margin-left: 1%;
    color: black;
    padding: 10px;
-   line-height: 3;
+   line-height: 2;
    text-decoration: none;
    background-color: #6197c6;
    border: 2px solid #0a0101;
+ }
+ .pagination p {
+   margin-left: 1%;
  }
 
  /* Style the active/current link */
