@@ -40,32 +40,26 @@
 
         </div>
         <div class="card text-center">
-            <button type="button" id="RonExchangeRateButton"> Refresh Ron Exchange Rate</button>
+            <label for="dateInput">Choose a date:</label>
+            <input type="date" id="dateInput" name="dateInput">
+            <button type="button" id="getExchangeRateButton">Get Exchange Rate</button>
         </div>
         <div class="card text-center" id="RonTable">
             <div class="pagination">
-                <a>&laquo;</a>
-                <p>{{ day_date }}</p>
-                <a>&raquo;</a>
+{#                <p>{{ day_date }}</p>#}
+                <button type="button" id="ActualExchangeRateButton">Show Todays RON Exchange Rate</button>
             </div>
-            <table>
+            <table id="hiddenCurrencyTable" style="visibility: collapse">
                 <thead>
                 <tr>
-                    <th>Tytul 1</th>
-                    <th>Tytul 2</th>
-                    <th>Tytul 3</th>
-                    <th>Tytul 4</th>
-                    <th>Tytul 5</th>
-                    <th>Tytul 6</th>
+                    <th>Currency Code</th>
+                    <th>Currency Name</th>
+                    <th>Rate Value</th>
+                    <th>Date</th>
                 </tr>
                 </thead>
-                <tbody>
-                    <td>pkt 1</td>
-                    <td>pkt 2</td>
-                    <td>pkt 3</td>
-                    <td>pkt 4</td>
-                    <td>pkt 5</td>
-                    <td>pkt 6</td>
+                <tbody id="ActualExchangeRateBody">
+
                 </tbody>
             </table>
         </div>
@@ -78,5 +72,7 @@
     <div class="dark-blue-layer"></div>
     <div class="light-blue-layer"></div>
 </div>
+<script src="../static/js/Api_todays_rate.js"></script>
+<script src="../static/js/Api_to_database.js"></script>
 </body>
 </html>
