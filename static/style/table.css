@@ -1,6 +1,7 @@
 table {
-    width: 100%;
-    margin-top: 10px;
+    width: 60%;
+    /*margin-top: 10px;*/
+    margin:20px auto;
 
     border-spacing: 0;
 
@@ -11,6 +12,7 @@ table {
 table th {
     color: #fff;
     background: #2ed216;
+    width: 25%;
 }
 
 table th a {
