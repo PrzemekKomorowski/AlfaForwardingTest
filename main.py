@@ -27,9 +27,36 @@ def add_to_database():
     rate_value = data.get('rate_value')
     date_time = data.get('date_time')
 
-    data_manager.insert_data(currency_code, currency_name, rate_value, date_time)
+    # Sprawdź, czy rekord już istnieje w bazie danych
+    existing_data = data_manager.get_rate_by_currency_and_date(currency_code, date_time)
 
-    return jsonify({'message': 'Data added successfully'}), 200
+    if existing_data:
+        pass
+    else:
+        data_manager.insert_data(currency_code, currency_name, rate_value, date_time)
+        return jsonify({'message': 'Data added successfully'}), 200
+
+    return jsonify({'message': 'Data already exists in the database'}), 400
+
+
+@app.route('/api/fill_table_based_on_date', methods=['POST'])
+def fill_table_based_on_date():
+    data = request.json
+    selected_date = data.get('date')
+
+    exchange_rates = data_manager.get_rate_by_date(selected_date)
+
+    # Przygotuj dane do zwrócenia w formie odpowiedzi JSON
+    response_data = []
+    for rate in exchange_rates:
+        response_data.append({
+            'currency_code': rate[1],
+            'currency_name': rate[2],
+            'rate_value': rate[3],
+            'date_time': rate[4]
+        })
+
+    return jsonify(response_data), 200
 
 
 def main():

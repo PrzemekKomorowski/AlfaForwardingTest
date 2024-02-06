@@ -27,17 +27,49 @@ document.getElementById('getExchangeRateButton').addEventListener('click', funct
 
     fetch(apiUrl)
         .then(response => response.json())
-        .then((exchangeRates) => {
-            console.log(exchangeRates)
-            // Iteracja po danych z API i dodanie ich do bazy danych
-            exchangeRates.forEach(rate => {
-                let currencyCode = rate.currency_code;
-                let rateValue = rate.rate_value;
-                let currencyName = getCurrencyName(currencyCode);
+        .then((data) => {
+        const exchangeRates = data.data;
 
-                addToDatabase(currencyCode, currencyName, rateValue, selectedDate);
-            });
+        Object.keys(exchangeRates).forEach(currencyCode => {
+            let rate = exchangeRates[currencyCode];
+            let rateValue = rate.value;
+            let currencyName = getCurrencyName(currencyCode);
+
+            addToDatabase(currencyCode, currencyName, rateValue, selectedDate);
         });
+        fillTableBasedOnDate(selectedDate);
+    })
+
+});
+
+document.getElementById('ActualExchangeRateButton').addEventListener('click', function () {
+    document.getElementById('hiddenCurrencyTable').style.visibility = 'visible';
+    document.getElementById('ActualExchangeRateBody').innerHTML =``
+
+    let today = new Date();
+    let year = today.getFullYear();
+    let month = String(today.getMonth() + 1).padStart(2, '0');
+    let day = String(today.getDate()).padStart(2, '0');
+    let currentDate = `${year}-${month}-${day}`;
+
+    // We contact Outside API here to get Exchange rate for RON
+    let apiUrl = `https://api.currencyapi.com/v3/latest?apikey=cur_live_mJ4ACx3qhR78ONOpAXzXbIRTkxGcqcvADkJmPh75&currencies=EGP%2CGBP%2CCZK%2CEUR%2CUSD%2CCHF%2CSEK%2CPLN%2CCNY%2CCAD&base_currency=RON`;
+
+    fetch(apiUrl)
+        .then(response => response.json())
+        .then((data) => {
+        const exchangeRates = data.data;
+
+        Object.keys(exchangeRates).forEach(currencyCode => {
+            let rate = exchangeRates[currencyCode];
+            let rateValue = rate.value;
+            let currencyName = getCurrencyName(currencyCode);
+
+            addToDatabase(currencyCode, currencyName, rateValue, currentDate);
+        });
+        fillTableBasedOnDate(currentDate);
+    })
+
 });
 
 // Funkcja do dodawania danych do bazy danych
@@ -63,6 +95,46 @@ function addToDatabase(currencyCode, currencyName, rateValue, date) {
     .then(data => {
         console.log('Data added to database:', data);
     })
+    .catch(error => {
+        console.error('Error:', error);
+    });
+}
+
+function fillTableBasedOnDate(date) {
+    fetch('/api/fill_table_based_on_date', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+            date: date
+        })
+    })
+    .then(response => {
+        if (!response.ok) {
+            throw new Error('Failed to fill table based on date');
+        }
+        return response.json();
+    })
+    .then(data => {
+    console.log('Table filled based on date:', data);
+
+    data.forEach(rate => {
+        let currency_code = rate.currency_code;
+        let currency_name = rate.currency_name;
+        let rate_value = rate.rate_value;
+        let date_time = rate.date_time;
+
+        document.getElementById('ActualExchangeRateBody').innerHTML += `
+            <tr>
+                <td>${currency_code}</td>
+                <td>${currency_name}</td>
+                <td>${rate_value}</td>
+                <td>${date_time}</td>
+            </tr>
+        `;
+    });
+})
     .catch(error => {
         console.error('Error:', error);
     });

@@ -25,7 +25,7 @@ def clear_table():
     conn = sqlite3.connect("C:\\Users\\Eteer\\Desktop\\AlfaForwading\\AlfaForwardingTest\\database\\ExchangeRate.db")
     cur = conn.cursor()
     cur.execute('''
-        DROP TABLE RonExchangeRate2;
+        DROP TABLE RonExchangeRate;
     ''')
     cur.close()
     conn.close()
@@ -54,6 +54,18 @@ def get_rate_by_date(date_time):
     conn.close()
     return data
 
+def get_rate_by_currency_and_date(currency_code, date_time):
+    conn = sqlite3.connect("C:\\Users\\Eteer\\Desktop\\AlfaForwading\\AlfaForwardingTest\\database\\ExchangeRate.db")
+    cur = conn.cursor()
+    cur.execute('''
+        SELECT * FROM RonExchangeRate
+        WHERE currency_code = ? AND date_time = ?
+    ''', (currency_code, date_time))
+    data = cur.fetchall()
+    cur.close()
+    conn.close()
+    return data
+
 
 def fetch_data():
     conn = sqlite3.connect("C:\\Users\\Eteer\\Desktop\\AlfaForwading\\AlfaForwardingTest\\database\\ExchangeRate.db")
@@ -68,4 +80,6 @@ def fetch_data():
 
 
 if __name__ == "__main__":
+    clear_table()
+    create_table()
     fetch_data()

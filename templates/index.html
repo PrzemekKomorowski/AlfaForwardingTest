@@ -46,8 +46,7 @@
         </div>
         <div class="card text-center" id="RonTable">
             <div class="pagination">
-{#                <p>{{ day_date }}</p>#}
-                <button type="button" id="ActualExchangeRateButton">Show Todays RON Exchange Rate</button>
+                <button type="button" id="ActualExchangeRateButton">Show Today`s RON Exchange Rate ( {{ day_date }} )</button>
             </div>
             <table id="hiddenCurrencyTable" style="visibility: collapse">
                 <thead>
@@ -72,7 +71,6 @@
     <div class="dark-blue-layer"></div>
     <div class="light-blue-layer"></div>
 </div>
-<script src="../static/js/Api_todays_rate.js"></script>
 <script src="../static/js/Api_to_database.js"></script>
 </body>
 </html>
